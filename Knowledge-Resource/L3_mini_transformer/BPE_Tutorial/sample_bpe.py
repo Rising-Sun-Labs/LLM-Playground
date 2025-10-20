@@ -1,4 +1,4 @@
-# sample_bpe.py
+# simple_bpe.py
 # Load best checkpoint and generate from a prompt with safe temperature/top-k.
 
 import argparse, torch

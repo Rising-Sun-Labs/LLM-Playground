@@ -1,0 +1,6 @@
+This is a tiny corpus for language modeling.
+Large Language Models learn statistical patterns in text and code.
+Transformers use attention to relate tokens across a sequence.
+We will train a small transformer on this sample data to demonstrate the pipeline.
+The model can generate text, write emails, summarize, and do simple code review templates.
+
