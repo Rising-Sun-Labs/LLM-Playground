@@ -69,7 +69,9 @@ LLM-Playground is a complete end-to-end learning and development environment for
     by division by zero!
     ```
 - Summary Table:
+```
   | Term | Meaning | Example |
   | ------------ | --------------------------------------------------------- | ------------------------------------------- |
   | `epoch` | One complete pass over the entire training dataset | `epochs = 10` → train 10 times over dataset |
   | `eps = 1e-5` | A small constant to avoid division by zero or instability | Used in normalization layers, optimizers |
+```
