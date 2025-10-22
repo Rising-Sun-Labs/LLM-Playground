@@ -1,0 +1,11 @@
+fastapi>=0.110
+uvicorn>=0.29
+torch>=2.2
+numpy>=1.24
+onnx>=1.15
+onnxruntime>=1.19
+pillow>=10.0
+tqdm>=4.66
+tensorboard>=2.14
+jupyter>=1.0
+requests>=2.31

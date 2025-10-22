@@ -1,5 +1,4 @@
 # Lesson: 6 - export & serving (TorchScript/ONNX/FastAPI)
-    
 
 ## 0) Goals
 
@@ -7,6 +6,13 @@
 - export to TorchScript(JIT) and ONNX
 - stand up a **FastAPI** service with:
   - `/health` (ready check)
-  - `/generate` (text completion for your mini-transformer) from L3_mini_transformer 
+  - `/generate` (text completion for your mini-transformer) from L3_mini_transformer
   - optional streaming tokens (SSE-style)
-- (bonus) quick **CPU quantization** for cheap inference. 
+- (bonus) quick **CPU quantization** for cheap inference.
+
+### Install:
+
+```
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
