@@ -1,0 +1,38 @@
+seed: 123
+
+# Where to save a run's metrics
+results_dir: results
+
+# Fail CI if any metric breaks these rules compared to baseline.json
+regression_policy:
+  # allowed relative drops; negative means drop allowed
+  max_relative_drop:
+    lm.ppl: 0.00 # no increase allowed; PPL must be <= baseline
+    classify.acc: -0.01 # allow up to -1% accuracy drop
+    golden.pass_rate: 0.00
+
+# Absolute pass/fail gates (useful when no baseline exists yet)
+absolute_thresholds:
+  lm.ppl: 60.0 # must be <= 60
+  classify.acc: 0.75 # must be >= 0.75
+  golden.pass_rate: 0.90 # must be >= 0.90
+
+# Tasks to run (you can disable any block)
+tasks:
+  lm_perplexity:
+    enabled: true
+    data_path: data/heldout_lm.txt
+    max_len: 256
+    batch_size: 8
+
+  classification:
+    enabled: true
+    data_path: data/classify.csv # CSV: text,label
+    normalize_labels: true
+
+  golden:
+    enabled: true
+    data_path: data/golden_prompts.jsonl # JSONL with {"prompt": "...", "expect": "...", "type": "contains|exact"}
+    max_new_tokens: 64
+    temperature: 0.9
+    top_k: 40

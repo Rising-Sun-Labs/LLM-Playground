@@ -1,0 +1,5 @@
+text,label
+"Service is slow but food is great",positive
+"Build failed on CI and needs urgent fix",negative
+"Love the new onboarding flow, much clearer",positive
+"App keeps crashing on startup",negative

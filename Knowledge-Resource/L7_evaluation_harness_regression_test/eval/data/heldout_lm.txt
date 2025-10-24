@@ -1,0 +1,2 @@
+This is a tiny held-out set. Your LM should model this distribution well.
+We use it only as a sanity check for perplexity.

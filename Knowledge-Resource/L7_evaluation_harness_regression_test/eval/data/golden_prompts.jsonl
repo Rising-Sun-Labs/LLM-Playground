@@ -1,0 +1,3 @@
+{"prompt":"Write a welcome email for a new engineer named Maya.","expect":"welcome","type":"contains"}
+{"prompt":"Summarize: We deployed v1.2 and fixed login bug.","expect":"fixed login bug","type":"contains"}
+{"prompt":"Return the word 'OK' exactly.","expect":"OK","type":"exact"}
