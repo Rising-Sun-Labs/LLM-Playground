@@ -27,7 +27,7 @@ def load_lm(ckpt_path: str, device="cpu"):
     obj = torch.load(ckpt_path, map_location=device)
     cfg = obj.get("config", {"vocab_size": 1200, "d_model":256, "n_layers":6, "n_heads":4, "d_mlp":1024, "max_len":256})
     # Define a matching model here or import from your codebase
-    from eval.harness.simple_transformer import MiniTransformerLM
+    from simple_transformer import MiniTransformerLM
     m = MiniTransformerLM(**cfg)
     sd = obj["model"] if "model" in obj else obj
     m.load_state_dict(sd); m.to(device).eval()

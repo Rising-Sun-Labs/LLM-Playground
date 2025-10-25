@@ -48,3 +48,34 @@ python eval/compare_results.py --current eval/results/results_*.json --baseline 
   - For PPL on big sets, compute on batches and avoid very long contexts if your model is small.
 
   - For classification, plug in your actual classifier head if you have one (accuracy improves, runs faster).
+
+### Run the tests
+- From the repo root where `/eval` and `/tests` live:
+```
+# ensure dependencies
+cd eval
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+deactivate
+cd ..
+
+# run fast test (weight-perturb regression)
+pytest -q
+
+# optional slower “high LR” demonstration
+pytest -q -k high_lr -m slow
+
+```
+
+
+### General Python 
+```
+🧩 What __init__.py Does
+
+In simple terms:
+__init__.py tells Python:
+“This folder is a package, and you can import from it.”
+Without it, Python just sees the folder as a regular directory — not one you can import from.
+```
+
+
