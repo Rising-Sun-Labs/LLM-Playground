@@ -131,3 +131,6 @@ Linear regression model in MathML and LaTeX:
 ```latex
 y = \mathbf{x}^\top \boldsymbol{\theta} + \varepsilon, \quad
 \varepsilon \sim \mathcal{N}(0, \sigma^2)
+```
+
+For more information look for Mathml
